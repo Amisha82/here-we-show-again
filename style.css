@@ -9,8 +9,8 @@
 }
 
 .greyBlock19{
-    height:100px;
-    width:20px;
+    height:20px;
+    width:100px;
     background-color:grey;
     margin:5px;
 }
@@ -20,3 +20,26 @@
     background-color: grey;
     margin:5px;
 }
+.greyBlock21{
+    height:20px;
+    background-color:grey;
+    margin:5px;
+}
+
+.greyBlock22 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }
+  
+  .greyBlock22:nth-child(odd) {
+    height: 20px;
+    background-color: red;
+    margin: 5px;
+  }
+  
+  .greyBlock23 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }

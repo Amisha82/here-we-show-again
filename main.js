@@ -279,11 +279,11 @@ for (let index18 = 1; index18 <= sampleArray.length - 1; index18++) {
 }
 Kata18Div.append(largestElement)
 
-//#19
+//#19  Display 20 solid gray rectangles, each 20px high and 100px wide.
 
 const kata19Heading = document.createElement("h3")
 parentElement.append(kata19Heading)
-katas19Heading.append("Kata 19:")
+kata19Heading.append("Kata 19:")
 const kata19output = document.createElement("div")
 parentElement.append(kata19output)
 
@@ -303,8 +303,73 @@ let blockwidth20 = 105;
 
 for (counter = 0; counter < 20; counter += 1) {
     const greyDiv = document.createElement("div");
-    greyDiv.setAttribute("class", "greyBlocks20");
+    greyDiv.setAttribute("class", "greyBlock20");
     greyDiv.style.width = blockwidth20 + "px";
     blockwidth20 += 5;
     parentElement.append(greyDiv);
+}
+
+//#  Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
+
+const kata21Heading = document.createElement("h3")
+parentElement.append(kata21Heading)
+kata21Heading.append("Kate 21:")
+const kata21Output = document.createElement("div")
+parentElement.append(kata21Output);
+
+
+for (let index21 = 0; index21 < sampleArray.length - 1; index21++) {
+    let blockwidth21 = sampleArray[index21];
+    const greyDiv = document.createElement("div");
+    greyDiv.setAttribute("class", "greyBlock21");
+    greyDiv.style.width = blockwidth21 + "px";
+    parentElement.append(greyDiv);
+}
+
+//#  As in #21, but alternate colors so that every other rectangle is red
+
+const kata22Heading = document.createElement("h3")
+parentElement.append(kata22Heading)
+kata22Heading.append("Kate 22:")
+const kata22Output = document.createElement("div")
+parentElement.append(kata22Output);
+
+
+for (let index22 = 0; index22 < sampleArray.length; index22++) {
+    const greyDiv = document.createElement("div");
+    greyDiv.setAttribute("class", "greyBlock22");
+    let number = sampleArray[index22]
+    greyDiv.style.width = number + "px";
+    parentElement.append(greyDiv);
+    if (index22 % 2 === 0) {
+
+        greyDiv.style.backgroundColor = "red";
+
+
+    }
+    else {
+        greyDiv.style.backgroundColor = "grey";
+    }
+}
+
+// #23, as in #21 but color the rectangles with even widths red.
+
+const kata23Heading = document.createElement("h3")
+parentElement.append(kata23Heading)
+kata23Heading.append("Kate 23:")
+const kata23Output = document.createElement("div")
+parentElement.append(kata23Output);
+
+
+for (let index23 = 0; index23 < sampleArray.length - 1; index23++) {
+    if (sampleArray[index23] % 2 === 0) {
+        let evenWidthred = sampleArray[index23]
+
+        const greyDiv = document.createElement("div");
+        greyDiv.setAttribute("class", "greyBlock23");
+        greyDiv.style.width = evenWidthred + "px";
+        greyDiv.style.backgroundColor = "red";
+
+        parentElement.append(greyDiv);
+    }
 }
