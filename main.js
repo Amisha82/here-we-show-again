@@ -1,5 +1,7 @@
 let documentBody = document.querySelector("body")
 
+const parentElement = document.querySelector(".katas-list")
+
 //Kata 1//
 let Kata1Div = document.createElement("div");
 Kata1Div.classList.add("KataDiv")
@@ -280,13 +282,29 @@ Kata18Div.append(largestElement)
 //#19
 
 const kata19Heading = document.createElement("h3")
-documentBody.append(kata19Heading)
+parentElement.append(kata19Heading)
 katas19Heading.append("Kata 19:")
 const kata19output = document.createElement("div")
-documentBody.append(kata19output)
+parentElement.append(kata19output)
 
 for (let count = 0; count < 20; count += 1) {
     const greyDiv = document.createElement("div")
-    greyDiv.setAttribute("class", "greyBlock19")
-    documentBody.append(greyDiv)
+    greyDiv.setAttribute('class', 'greyBlock19')
+    parentElement.append(greyDiv)
+}
+
+//#20  Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
+const kata20Heading = document.createElement("h3")
+parentElement.append(kata20Heading)
+kata20Heading.append("Kate 20:")
+const kata20Output = document.createElement("div")
+parentElement.append(kata20Output)
+let blockwidth20 = 105;
+
+for (counter = 0; counter < 20; counter += 1) {
+    const greyDiv = document.createElement("div");
+    greyDiv.setAttribute("class", "greyBlocks20");
+    greyDiv.style.width = blockwidth20 + "px";
+    blockwidth20 += 5;
+    parentElement.append(greyDiv);
 }
