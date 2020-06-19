@@ -12,7 +12,7 @@ Kata1Div.append(KataTitle)
 //Display the numbers from 1 to 20. (1, 2, 3, …,19, 20)
 for (let index1 = 1; index1 <= 20; index1++) {
     let currentNumber = index1;
-    Kata1Div.append(`${currentNumber}, `)
+    //  Kata1Div.append(`${currentNumber}, `)
     Kata1Div.append(currentNumber + ", ")
 }
 
@@ -277,3 +277,16 @@ for (let index18 = 1; index18 <= sampleArray.length - 1; index18++) {
 }
 Kata18Div.append(largestElement)
 
+//#19
+
+const kata19Heading = document.createElement("h3")
+documentBody.append(kata19Heading)
+katas19Heading.append("Kata 19:")
+const kata19output = document.createElement("div")
+documentBody.append(kata19output)
+
+for (let count = 0; count < 20; count += 1) {
+    const greyDiv = document.createElement("div")
+    greyDiv.setAttribute("class", "greyBlock19")
+    documentBody.append(greyDiv)
+}
