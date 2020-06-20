@@ -362,14 +362,19 @@ parentElement.append(kata23Output);
 
 
 for (let index23 = 0; index23 < sampleArray.length - 1; index23++) {
-    if (sampleArray[index23] % 2 === 0) {
-        let evenWidthred = sampleArray[index23]
 
-        const greyDiv = document.createElement("div");
-        greyDiv.setAttribute("class", "greyBlock23");
-        greyDiv.style.width = evenWidthred + "px";
+    let evenWidthred = sampleArray[index23]
+
+    const greyDiv = document.createElement("div");
+    greyDiv.setAttribute("class", "greyBlock23");
+    greyDiv.style.width = evenWidthred + "px";
+    parentElement.append(greyDiv);
+    if (sampleArray[index23] % 2 === 0) {
         greyDiv.style.backgroundColor = "red";
 
-        parentElement.append(greyDiv);
+
+    }
+    else {
+        greyDiv.style.backgroundColor = "grey";
     }
 }
